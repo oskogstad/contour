@@ -45,8 +45,8 @@ spec:
 This Ingress object, named `basic`, will route incoming HTTP traffic with a `Host:` header for `foo-basic.bar.com` to a Service named `s1` on port `80`.
 Implementing similar behavior using an IngressRoute looks like this:
 
-{% highlight yaml linenos %}
 # ingressroute.yaml
+```yaml
 apiVersion: contour.heptio.com/v1beta1
 kind: IngressRoute
 metadata:
@@ -59,7 +59,7 @@ spec:
       services:
         - name: s1
           port: 80
-{% endhighlight %}
+```
 
 **Lines 1-5**: As with all other Kubernetes objects, an IngressRoute needs apiVersion, kind, and metadata fields. Note that the IngressRoute API is currently considered beta.
 
